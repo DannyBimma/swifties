@@ -9,9 +9,9 @@ var greeting = ""
 
 if let user = userName {
     if let time = timeofDay {
-        if timeofDay ?? 12 < 11 {
+        if time < 11 {
             greeting = "Good morning, \(user)!"
-        } else if timeofDay ?? 12 > 12 {
+        } else if time > 12 {
             greeting = "Good evening \(user)!"
         } else {
             greeting = " Good day, \(user)!"
