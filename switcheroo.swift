@@ -12,6 +12,7 @@ case "RedBull":
     print("Congrats on winning the 2025 WDC!")
 case "Mercedes", "Williams", "Aston Martin":
     print("Congrats on the runner up Championship position!")
+// use let in a pattern to assign the value that matched the pattern to a constant.
 case let team where team.hasSuffix("Ferrari"):
     print("Congrats on being strong, \(team) is pain!")
 default:
