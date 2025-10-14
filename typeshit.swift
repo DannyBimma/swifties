@@ -14,6 +14,7 @@ let formatter = NumberFormatter()
 formatter.numberStyle = .decimal
 formatter.maximumFractionDigits = 3  // Decimal places
 formatter.minimumFractionDigits = 3  // Guard against trailing 0's
-anumPercentage = formatter.string(from: NSNumber(value: anumPercentage))
+let formattedPercentage =
+    formatter.string(from: NSNumber(value: anumPercentage)) ?? "\(anumPercentage)"
 
-print("The year \(anum) is exactly \(anumPercentage)% completed!")
+print("The year \(anum) is exactly \(formattedPercentage)% completed!")
