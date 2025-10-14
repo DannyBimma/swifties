@@ -20,4 +20,8 @@ crewRoles["Chopper"] = "Doctor"
 print(strawHats)
 print(crewRoles)
 print(strawHats[0])
-print(crewRoles["Luffy"])
+// Dicts always return optionals types
+// the nil-coalescing operator (??) which
+// explicitly handles the optional and provides
+// a default value.
+print(crewRoles["Luffy"] ?? "Unknown")
