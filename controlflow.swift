@@ -11,4 +11,12 @@ for sale in salesHistory {
     }
 }
 
-print(commission)
+let salesAssesment =
+    if commission > 40 {
+        "Excellent, you are actually capable of selling wares!"
+    } else {
+        "Damn shame on the sales, please do better at life!"
+    }
+
+print("Sales Commission: $\(commission)")
+print("SaleBot Assesment: \(salesAssesment)")
