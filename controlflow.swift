@@ -3,10 +3,9 @@
 // Optionals for value that may be missing
 let timeofDay: Int? = 9
 let userName: String? = "Danny Bimma"
-
-// Set default value for potential missing/nil optional values
 var greeting = ""
 
+// Idiomatically unwrap both values in nesting
 if let user = userName {
     if let time = timeofDay {
         if time < 11 {
@@ -26,6 +25,7 @@ print(greeting)
 let salesHistory = [420.69, 42.47, 360.00, 195.55, 99.99]
 var commission = 0
 
+// For loops are iterators, for easy iterations
 for sale in salesHistory {
     if sale > 50 {
         commission += 15
@@ -34,7 +34,7 @@ for sale in salesHistory {
     }
 }
 
-// Conditional constant assignment
+// Conditionally assign constants
 let salesAssesment =
     if commission > 40 {
         "Excellent, you are actually capable of selling wares!"
