@@ -19,3 +19,24 @@ default:
     print("Congrats on being a Formula One team.")
     print("Better luck on placing next season!!")
 }
+
+// Init array of dictionaries
+let teamPoints = [
+    "McLaren": 650,
+    "Mercedes": 325,
+    "Scuderia Ferrari": 298,
+    "RedBull": 290,
+]
+
+var mostPoints = 0
+var winningTeam = ""
+
+for (team, points) in teamPoints {
+    if points > mostPoints {
+        mostPoints = points
+        winningTeam = team
+    }
+}
+
+print("The winning team: \(winningTeam)")
+print("The winning points total: \(mostPoints)")
