@@ -17,4 +17,7 @@ formatter.minimumFractionDigits = 3  // Guard against trailing 0's
 let formattedPercentage =
     formatter.string(from: NSNumber(value: anumPercentage)) ?? "\(anumPercentage)"
 
+// Alternative Solution with String:
+// let formattedPercentage = String(format: "%.3f", anumPercentage)
+
 print("The year \(anum) is exactly \(formattedPercentage)% completed!")
