@@ -10,12 +10,15 @@ func generateGreeting(user: String?, time: Int?) -> String {
     guard let user = user else { return "" }
     guard let time = time else { return "" }
 
-    if time < 11 {
+    switch time {
+    case 0..<11:
         return "Good morning, \(user)!"
-    } else if time > 12 {
+    case 13...19:
         return "Good evening \(user)!"
-    } else {
-        return "Good day, \(user)!"
+    case 20..<24:
+        return "Good night \(user)"
+    default:
+        return "Welcome to demon time, \(user)!"
     }
 }
 
