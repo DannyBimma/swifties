@@ -11,7 +11,7 @@ func generateGreeting(user: String?, time: Int?) -> String {
     guard let time = time else { return "" }
 
     switch time {
-    case 0..<11:
+    case 0..<12:
         return "Good morning, \(user)!"
     case 13...19:
         return "Good evening \(user)!"
