@@ -28,3 +28,21 @@ func doubleUp() -> ((Int) -> Int) {
 
 let alternatively = doubleUp()
 print("However, you can also keep it \(alternatively(100)) if you so desire.")
+
+// Functions can be passed as parameters to other functions
+func trippleUp(num: Int, getTrippy: (Int) -> Int) -> Int {
+    return getTrippy(num)
+}
+
+func triple(value: Int) -> Int {
+    return value * 3
+}
+
+let tripOut = trippleUp(num: 100, getTrippy: triple)
+print("But even then, you can strive to keep it \(tripOut).")
+
+// One can also pass a closure directly
+let anotherTrip = trippleUp(num: 390) { value in
+    return value + 10
+}
+print("Or live within a closure of \(anotherTrip).")
