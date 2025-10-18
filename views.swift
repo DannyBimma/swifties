@@ -18,3 +18,11 @@ func viewCounter(views: [Int]) -> (min: Int, max: Int, total: Int) {
 
     return (min, max, total)
 }
+
+let analytics = viewCounter(views: [420, 69, 47, 42, 64, 8734, 1_000_000_000, 3])
+
+// Output using the name or number of an element in a tuple to access it
+print("YOUR STATISTICS THIS WEEK:")
+print("Max Views: \(analytics.1)")
+print("Total Views: \(analytics.total)")
+print("Your worst performing video views: \(analytics.min)")
