@@ -1,7 +1,7 @@
 // Loops, Iterators, and Conditionals
 
 // Optionals for value that may be missing
-let timeofDay: Int? = 9
+let timeofDay: Int? = 12
 let userName: String? = "Danny Bimma"
 var greeting = ""
 
