@@ -9,6 +9,7 @@ class Anime {
     init(title: String, epCount: Int, rating: Int, currentlyAiring: Bool) {
         self.title = title
         self.epCount = epCount
+        self.rating = rating
         self.currentlyAiring = currentlyAiring
     }
 
@@ -30,3 +31,6 @@ class Anime {
 }
 
 var faveAnime = Anime(title: "One Piece", epCount: 1140, rating: 10, currentlyAiring: true)
+
+print("🏴‍☠️\(faveAnime.title)🏴‍☠️")
+faveAnime.displayInfo()
