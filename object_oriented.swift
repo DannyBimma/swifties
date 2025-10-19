@@ -8,9 +8,6 @@ class Anime {
 
     init(title: String, epCount: Int, rating: Int, currentlyAiring: Bool) {
         self.title = title
-        self.epCount = epCount
-        self.rating = rating
         self.currentlyAiring = currentlyAiring
     }
 }
-
