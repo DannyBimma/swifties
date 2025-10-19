@@ -8,10 +8,25 @@ class Anime {
 
     init(title: String, epCount: Int, rating: Int, currentlyAiring: Bool) {
         self.title = title
+        self.epCount = epCount
         self.currentlyAiring = currentlyAiring
-        // epCount and rating keep their default values of 0
+    }
+
+    func addNewEp() {
+        epCount += 1
+    }
+
+    func displayInfo() {
+        print("Title: \(title)")
+        print("Episodes: \(epCount)")
+        print("Rating: \(rating)/10")
+
+        if currentlyAiring {
+            print("Status: Currently Airing.")
+        } else {
+            print("Status: Shit's over!")
+        }
     }
 }
 
 var faveAnime = Anime(title: "One Piece", epCount: 1140, rating: 10, currentlyAiring: true)
-
