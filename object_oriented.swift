@@ -9,5 +9,9 @@ class Anime {
     init(title: String, epCount: Int, rating: Int, currentlyAiring: Bool) {
         self.title = title
         self.currentlyAiring = currentlyAiring
+        // epCount and rating keep their default values of 0
     }
 }
+
+var faveAnime = Anime(title: "One Piece", epCount: 1140, rating: 10, currentlyAiring: true)
+
