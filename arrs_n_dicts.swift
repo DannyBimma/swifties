@@ -25,3 +25,7 @@ print(strawHats[0])
 // explicitly handles the optional and provides
 // a default value.
 print(crewRoles["Luffy"] ?? "Unknown")
+
+for (key, value) in crewRoles {
+    print("\(key) is a \(value)")
+}
