@@ -2,8 +2,8 @@
 // in Swift can have methods associated with them.
 
 // Enum to represent the Strawhat Pirates
-enum strawHats {
-    case Luffy
+enum Strawhats: Int {
+    case Luffy = 1
     case Zoro
     case Sanji
     case Usopp
@@ -22,6 +22,10 @@ enum strawHats {
             return "Cook"
         case .Nami:
             return "Navigator"
+        default:
+            return String(self.rawValue)
         }
     }
 }
+
+let captain = Strawhats.Luffy
