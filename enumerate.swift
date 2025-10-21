@@ -28,4 +28,9 @@ enum Strawhats: Int {
     }
 }
 
+// Create an instance of the enum
 let captain = Strawhats.Luffy
+let captainRawValue = captain.rawValue
+
+print("The Captain of the Strawhats is Monkey D. \(captain)!")
+print("The rank of the Captain is: #\(captainRawValue)")
