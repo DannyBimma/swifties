@@ -26,6 +26,8 @@ enum Strawhats: Int {
             return String(self.rawValue)
         }
     }
+
+    //TODO: A method to compare crew ranks
 }
 
 // Create an instance of the enum
