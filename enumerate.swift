@@ -22,17 +22,21 @@ enum Strawhats: Int {
             return "Cook"
         case .Nami:
             return "Navigator"
-        default:
-            return String(self.rawValue)
         }
     }
 
-    //TODO: A method to compare crew ranks
+    // A method to compare crew ranks
+    static func rankings(_ member1: Strawhats, _ member2: Strawhats) -> Bool {
+        return member1.rawValue < member2.rawValue
+    }
 }
 
-// Create an instance of the enum
+// Create an instances of the enum
 let captain = Strawhats.Luffy
+let viceCaptain = Strawhats.Zoro
 let captainRawValue = captain.rawValue
 
 print("The Captain of the Strawhats is Monkey D. \(captain)!")
 print("The rank of the Captain is: #\(captainRawValue)")
+print(
+    "Rank of \(captain) higher than \(viceCaptain): \(Strawhats.rankings(captain, Strawhats.Zoro))")
