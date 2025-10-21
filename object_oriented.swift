@@ -39,3 +39,12 @@ var faveAnime = Anime(title: "One Piece", epCount: 1140, rating: 10, currentlyAi
 // Different ways to output data thanks to a certain method
 print("🏴‍☠️\(faveAnime.title)🏴‍☠️")
 faveAnime.displayInfo()
+
+// Increment the episode count
+faveAnime.addNewEp()
+
+print("\n")
+print("New Episode of \(faveAnime.title) has been added!")
+print("\n")
+
+faveAnime.displayInfo()
