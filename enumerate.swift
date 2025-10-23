@@ -86,6 +86,6 @@ print(
 
 print("\n")
 
-print("The current status of the ship is: \(currentStatus)")
+print("The current status of the ship is: \(currentStatus.status())")
 print("The current latitude of the ship is: \(currentLatitude.latitude())")
 print("The current longitude of the ship is: \(currentLongitude.longitude())")
