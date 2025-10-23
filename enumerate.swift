@@ -37,6 +37,16 @@ enum ShipCoordinates {
     case latitude(Int, Int, Int)  // degrees, minutes, seconds
     case longitude(Int, Int, Int)
     case status(String)
+
+    // A method to return the status
+    func status() -> String {
+        switch self {
+        case .status(let status):
+            return status
+        default:
+            return "Unknown, mysterious location 🏴‍☠️"
+        }
+    }
 }
 
 // Create an instances of the enum
