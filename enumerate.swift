@@ -47,6 +47,26 @@ enum ShipCoordinates {
             return "Unknown, mysterious location 🏴‍☠️"
         }
     }
+
+    /// A method to return the latitude
+    func latitude() -> String {
+        switch self {
+        case .latitude(let degrees, let minutes, let seconds):
+            return "\(degrees)° \(minutes)''\(seconds)\""
+        default:
+            return "Unknown, mysterious location 🏴‍☠️"
+        }
+    }
+
+    /// A method to return the longitude
+    func longitude() -> String {
+        switch self {
+        case .longitude(let degrees, let minutes, let seconds):
+            return "\(degrees)° \(minutes)''\(seconds)\""
+        default:
+            return "Unknown, mysterious location 🏴‍☠️"
+        }
+    }
 }
 
 // Create an instances of the enum
