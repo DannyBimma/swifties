@@ -69,10 +69,15 @@ enum ShipCoordinates {
     }
 }
 
-// Create an instances of the enum
+// Create an instances of the Strawhat enum
 let captain = Strawhats.Luffy
 let viceCaptain = Strawhats.Zoro
 let captainRawValue = captain.rawValue
+
+// Create an instance of the ShipCoordinates enum
+let currentLatitude = ShipCoordinates.latitude(degrees: 40, minutes: 41, seconds: 21)
+let currentLongitude = ShipCoordinates.longitude(degrees: 74, minutes: 02, seconds: 40)
+let currentStatus = ShipCoordinates.status("Unknown, mysterious location 🏴‍☠️")
 
 print("The Captain of the Strawhats is Monkey D. \(captain)!")
 print("The rank of the Captain is: #\(captainRawValue)")
