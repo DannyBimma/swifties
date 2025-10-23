@@ -31,6 +31,11 @@ enum Strawhats: Int {
     }
 }
 
+// Create an instances of the Strawhat enum
+let captain = Strawhats.Luffy
+let viceCaptain = Strawhats.Zoro
+let captainRawValue = captain.rawValue
+
 // Enum to represent the ship's navigational status
 enum ShipCoordinates {
     // Cases for latitude, longitude and status
@@ -38,7 +43,7 @@ enum ShipCoordinates {
     case longitude(degrees: Int, minutes: Int, seconds: Int)
     case status(String)
 
-    // A method to return the status
+    /// Status method
     func status() -> String {
         switch self {
         case .status(let status):
@@ -47,8 +52,7 @@ enum ShipCoordinates {
             return "Unknown, mysterious location 🏴‍☠️"
         }
     }
-
-    /// A method to return the latitude
+    /// Latitude method
     func latitude() -> String {
         switch self {
         case .latitude(let degrees, let minutes, let seconds):
@@ -58,7 +62,7 @@ enum ShipCoordinates {
         }
     }
 
-    /// A method to return the longitude
+    /// Longitude method
     func longitude() -> String {
         switch self {
         case .longitude(let degrees, let minutes, let seconds):
@@ -69,16 +73,12 @@ enum ShipCoordinates {
     }
 }
 
-// Create an instances of the Strawhat enum
-let captain = Strawhats.Luffy
-let viceCaptain = Strawhats.Zoro
-let captainRawValue = captain.rawValue
-
-// Create an instance of the ShipCoordinates enum
+// Instances of the ship's coordinates
 let currentLatitude = ShipCoordinates.latitude(degrees: 40, minutes: 41, seconds: 21)
 let currentLongitude = ShipCoordinates.longitude(degrees: 74, minutes: 02, seconds: 40)
 let currentStatus = ShipCoordinates.status("Alongside the Statue of Liberty 🏴‍☠️")
 
+// Routine outputs
 print("The Captain of the Strawhats is Monkey D. \(captain)!")
 print("The rank of the Captain is: #\(captainRawValue)")
 print(
