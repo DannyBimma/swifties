@@ -31,6 +31,14 @@ enum Strawhats: Int {
     }
 }
 
+// Enum to represent the ship's navigational status
+enum ShipCoordinates {
+    // Cases for latitude, longitude and status
+    case latitude(Int, Int, Int)  // degrees, minutes, seconds
+    case longitude(Int, Int, Int)
+    case status(String)
+}
+
 // Create an instances of the enum
 let captain = Strawhats.Luffy
 let viceCaptain = Strawhats.Zoro
