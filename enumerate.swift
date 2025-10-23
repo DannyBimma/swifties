@@ -34,8 +34,8 @@ enum Strawhats: Int {
 // Enum to represent the ship's navigational status
 enum ShipCoordinates {
     // Cases for latitude, longitude and status
-    case latitude(Int, Int, Int)  // degrees, minutes, seconds
-    case longitude(Int, Int, Int)
+    case latitude(degrees: Int, minutes: Int, seconds: Int)
+    case longitude(degrees: Int, minutes: Int, seconds: Int)
     case status(String)
 
     // A method to return the status
@@ -77,9 +77,15 @@ let captainRawValue = captain.rawValue
 // Create an instance of the ShipCoordinates enum
 let currentLatitude = ShipCoordinates.latitude(degrees: 40, minutes: 41, seconds: 21)
 let currentLongitude = ShipCoordinates.longitude(degrees: 74, minutes: 02, seconds: 40)
-let currentStatus = ShipCoordinates.status("Unknown, mysterious location 🏴‍☠️")
+let currentStatus = ShipCoordinates.status("Alongside the Statue of Liberty 🏴‍☠️")
 
 print("The Captain of the Strawhats is Monkey D. \(captain)!")
 print("The rank of the Captain is: #\(captainRawValue)")
 print(
     "Rank of \(captain) higher than \(viceCaptain): \(Strawhats.rankings(captain, Strawhats.Zoro))")
+
+print("\n")
+
+print("The current status of the ship is: \(currentStatus)")
+print("The current latitude of the ship is: \(currentLatitude.latitude())")
+print("The current longitude of the ship is: \(currentLongitude.longitude())")
