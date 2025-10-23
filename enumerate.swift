@@ -3,89 +3,65 @@
 
 // Enum to represent the Strawhat Pirates
 enum Strawhats: Int {
-    case Luffy = 1
-    case Zoro
-    case Sanji
-    case Usopp
-    case Nami
+    case luffy = 1
+    case zoro
+    case sanji
+    case usopp
+    case nami
 
-    // A method to returns crew roles
+    // Method that returns crew roles
     func role() -> String {
         switch self {
-        case .Luffy:
+        case .luffy:
             return "Captain"
-        case .Zoro:
+        case .zoro:
             return "Vice Captain"
-        case .Usopp:
+        case .usopp:
             return "Sniper"
-        case .Sanji:
+        case .sanji:
             return "Cook"
-        case .Nami:
+        case .nami:
             return "Navigator"
         }
     }
 
-    // A method to compare crew ranks
-    static func rankings(_ member1: Strawhats, _ member2: Strawhats) -> Bool {
+    // Method to compare crew ranks
+    static func hasHigherRank(_ member1: Strawhats, than member2: Strawhats) -> Bool {
         return member1.rawValue < member2.rawValue
     }
 }
 
-// Create an instances of the Strawhat enum
-let captain = Strawhats.Luffy
-let viceCaptain = Strawhats.Zoro
+// Instances of the Strawhat enum
+let captain = Strawhats.luffy
+let viceCaptain = Strawhats.zoro
 let captainRawValue = captain.rawValue
 
-// Enum to represent the ship's navigational status
-enum ShipCoordinates {
-    // Cases for latitude, longitude and status
-    case latitude(degrees: Int, minutes: Int, seconds: Int)
-    case longitude(degrees: Int, minutes: Int, seconds: Int)
-    case status(String)
+// Struct to represent The Sunny's coordinates
+struct Coordinate {
+    let degrees: Int
+    let minutes: Int
+    let seconds: Int
 
-    /// Status method
-    func status() -> String {
-        switch self {
-        case .status(let status):
-            return status
-        default:
-            return "Unknown, mysterious location 🏴‍☠️"
-        }
-    }
-    /// Latitude method
-    func latitude() -> String {
-        switch self {
-        case .latitude(let degrees, let minutes, let seconds):
-            return "\(degrees)° \(minutes)''\(seconds)\""
-        default:
-            return "Unknown, mysterious location 🏴‍☠️"
-        }
-    }
-
-    /// Longitude method
-    func longitude() -> String {
-        switch self {
-        case .longitude(let degrees, let minutes, let seconds):
-            return "\(degrees)° \(minutes)''\(seconds)\""
-        default:
-            return "Unknown, mysterious location 🏴‍☠️"
-        }
+    /// Format the coordinate as a string
+    func formatted() -> String {
+        return "\(degrees)° \(minutes)'\(seconds)\""
     }
 }
 
 // Instances of the ship's coordinates
-let currentLatitude = ShipCoordinates.latitude(degrees: 40, minutes: 41, seconds: 21)
-let currentLongitude = ShipCoordinates.longitude(degrees: 74, minutes: 02, seconds: 40)
-let currentStatus = ShipCoordinates.status("Alongside the Statue of Liberty 🏴‍☠️")
+let currentLatitude = Coordinate(degrees: 40, minutes: 41, seconds: 21)
+let currentLongitude = Coordinate(degrees: 74, minutes: 2, seconds: 40)
+let currentStatus = "Alongside the Statue of Liberty 🏴‍☠️"
 
-// Routine outputs
+// Terminal outputs
 print("The Captain of the Strawhats is Monkey D. \(captain)!")
 print("The rank of the Captain is: #\(captainRawValue)")
 print(
-    "Rank of \(captain) higher than \(viceCaptain): \(Strawhats.rankings(captain, Strawhats.Zoro))")
+    "Rank of \(captain) higher than \(viceCaptain): \(Strawhats.hasHigherRank(captain, than: viceCaptain))"
+)
 
 print("\n")
 
-print("The current status of the ship is: \(currentStatus.status())")
-print("The current latitude of the ship is: \(currentLatitude.latitude())")
-print("The current longitude of the ship is: \(currentLongitude.longitude())")
+print("The current status of The Sunny is: \(currentStatus)")
+print("The current latitude of The Sunny is: \(currentLatitude.formatted())")
+print("The current longitude of The Sunny is: \(currentLongitude.formatted())")
