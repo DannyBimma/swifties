@@ -18,8 +18,8 @@ strawHats.append("Chopper")
 crewRoles["Chopper"] = "Doctor"
 
 print(strawHats)
-print(crewRoles)
 print(strawHats[0])
+// Provide default value if key doesn't exist
 // Dicts always return optionals types
 // the nil-coalescing operator (??) which
 // explicitly handles the optional and provides
