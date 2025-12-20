@@ -1,9 +1,9 @@
 // Arrays and Dictionaries
 
-// Initial array of original crew members
+// Init array of original crew members
 var strawHats = ["Luffy", "Zoro", "Nami", "Usopp"]
 
-// Dictionary for crew members and their roles
+// Init a dictionary for crew members and their roles
 var crewRoles = [
     "Luffy": "Captain",
     "Zoro": "Vice Captain",
@@ -12,7 +12,7 @@ var crewRoles = [
     "Usopp": "Sniper",
 ]
 
-// Add elements to array, they automatically grow
+// Add elements to array, they are dynamic in Swift
 strawHats.append("Chopper")
 
 // Same for the dictionaries
@@ -27,11 +27,13 @@ print(strawHats[0])
 print()
 print(crewRoles)
 print()
-// Provide default value if key doesn't exist
-// Dicts always return optionals types
-// the nil-coalescing operator (??) which
-// explicitly handles the optional and provides
-// a default value.
+
+/*
+Provide default value if key doesn't exist. Dicts always return
+an optional even if the key doesn't exist. This is because the
+optional provides a default value.
+*/
+
 print(crewRoles["Luffy"] ?? "Unknown")
 print()
 
