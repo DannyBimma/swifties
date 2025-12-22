@@ -1,3 +1,11 @@
+/*
+* Routine: Prints various data type sizes in Swift and their maximum values.
+*
+* Author:  DannyBimma
+*
+* Copyright (c) 2025 Technomancer Pirate Captain. All Rights Reserved.
+*/
+
 let intSize = MemoryLayout<Int>.size
 let doubleSize = MemoryLayout<Double>.size
 let floatSize = MemoryLayout<Float>.size
@@ -10,7 +18,6 @@ let maxDouble = Double.greatestFiniteMagnitude
 let maxFloat = Float.greatestFiniteMagnitude
 let maxChar = CChar.max
 // Note: String has no fixed maximum - limited only by available memory
-// Creating a demonstration string instead
 
 print("THE BYTE SIZE OF DIFFERENT DATA TYPES IN SWIFT:")
 print("Int size: \(intSize) bytes")

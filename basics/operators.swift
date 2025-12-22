@@ -1,7 +1,8 @@
 /*
 * Routine: This source code displays the basics of operators in Swift.
+*
 * Author:  DannyBimma
-* Date:    2025-12-20
+*
 * Copyright (c) 2025 Technomancer Pirate Captain. All Rights Reserved.
 */
 
