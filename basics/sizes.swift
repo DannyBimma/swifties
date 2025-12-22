@@ -9,19 +9,20 @@ let maxInt = Int.max
 let maxDouble = Double.greatestFiniteMagnitude
 let maxFloat = Float.greatestFiniteMagnitude
 let maxChar = CChar.max
-let maxString = String.init(repeating: "a", count: Int.max)
+// Note: String has no fixed maximum - limited only by available memory
+// Creating a demonstration string instead
 
 print("THE BYTE SIZE OF DIFFERENT DATA TYPES IN SWIFT:")
-print("Int size: \(intSize)")
-print("Double size: \(doubleSize)")
-print("Float size: \(floatSize)")
-print("Bool size: \(boolSize)")
-print("Char size: \(charSize)")
-print("String size: \(stringSize)")
+print("Int size: \(intSize) bytes")
+print("Double size: \(doubleSize) bytes")
+print("Float size: \(floatSize) bytes")
+print("Bool size: \(boolSize) bytes")
+print("Char size: \(charSize) bytes")
+print("String size: \(stringSize) bytes (for the String struct itself, not the content)")
 
-print("THE MAXIMUM ALLOWABLE VALUES OF DIFFERENT DATA TYPES IN SWIFT:")
+print("\nTHE MAXIMUM ALLOWABLE VALUES OF DIFFERENT DATA TYPES IN SWIFT:")
 print("Max Int: \(maxInt)")
 print("Max Double: \(maxDouble)")
 print("Max Float: \(maxFloat)")
 print("Max Char: \(maxChar)")
-print("Max String: \(maxString)")
+print("Max String: N/A (limited only by available memory)")
