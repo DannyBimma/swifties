@@ -15,7 +15,7 @@ print("count: \(count)")
 print("count2: \(count2)")
 
 // Assign multiple values to multiple variables using a tuple
-let (x, y, z) = (123, 234, 345)
+let (x, y, z) = (123, 456, 789)
 
 print("x: \(x)")
 print("y: \(y)")
