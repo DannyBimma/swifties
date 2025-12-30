@@ -42,3 +42,50 @@ print("4.2 / 6.9 =", " ", 4.2 / 6.9)
 */
 let intOverflow: Int = Int.max &+ 69
 print("intOverflow: \(intOverflow)")
+
+// Compound Assignment Operations
+print("\n")
+print("COMPOUND ASSIGNMENT OPERATIONS")
+
+var count3 = 420
+count3 += 420
+
+print("count3: \(count3)")
+
+// Comparison Operations
+print("\n")
+print("COMPARISON OPERATIONS")
+
+print(69 == 69)
+print(69 != 420)
+print(69 > 420)
+print(69 < 420)
+print(69 >= 420)
+print(69 <= 420)
+
+/*NOTE:
+    You can compare two tuples if they have the same type
+    and the same number of values. Tuples are compared from
+    left to right, one value at a time, until the comparison
+    finds two values that aren’t equal. Those two values are
+    compared, and the result of that comparison determines the
+    overall result of the tuple comparison. If all the elements
+    are equal, then the tuples themselves are equal.
+*/
+
+print("A Tuple of Comparisons:")
+print((420, "Luffy") < (69, "Nami"))
+print((3, "Sanji") < (4, "Zoro"))
+print((45, "Chopper") == (38, "Franky"))
+
+// Ternary Conditional Operations
+print("\n")
+print("TERNARY CONDITIONAL OPERATIONS")
+
+let ballStatus = 420 > 69
+
+ballStatus ? print("FUCK IT!!") : print("WE BALL!!")
+
+// Nil Coalescing Operations
+print("\n")
+print("NIL COALESCING OPERATIONS")
