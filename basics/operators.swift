@@ -9,10 +9,13 @@
 // Assignment Operations
 print("\n")
 print("VALUES OF OBJECTS")
+
 let count = 69  // This is a constant
 var count2 = 420
+
 count2 = count2 + count2
 
+// The print function automatically adds a newline char
 print("count: \(count)")
 print("count2: \(count2)")
 
@@ -34,11 +37,11 @@ print("144 % 14 =", " ", 144 % 14)
 print("4.2 / 6.9 =", " ", 4.2 / 6.9)
 
 /*NOTE:
-    Unlike the arithmetic operators in C and Objective-C,
-    the Swift arithmetic operators don’t allow values to
-    overflow by default. You can opt in to value overflow
-    behaviour by using Swift’s overflow operators
-    (such as a &+ b)
+Unlike the arithmetic operators in C and Objective-C,
+the Swift arithmetic operators don’t allow values to
+overflow by default. You can opt in to value overflow
+behaviour by using Swift’s overflow operators
+(such as a &+ b)
 */
 let intOverflow: Int = Int.max &+ 69
 print("intOverflow: \(intOverflow)")
@@ -48,6 +51,7 @@ print("\n")
 print("COMPOUND ASSIGNMENT OPERATIONS")
 
 var count3 = 420
+
 count3 += 420
 
 print("count3: \(count3)")
@@ -64,13 +68,13 @@ print(69 >= 420)
 print(69 <= 420)
 
 /*NOTE:
-    You can compare two tuples if they have the same type
-    and the same number of values. Tuples are compared from
-    left to right, one value at a time, until the comparison
-    finds two values that aren’t equal. Those two values are
-    compared, and the result of that comparison determines the
-    overall result of the tuple comparison. If all the elements
-    are equal, then the tuples themselves are equal.
+You can compare two tuples if they have the same type
+and the same number of values. Tuples are compared from
+left to right, one value at a time, until the comparison
+finds two values that aren’t equal. Those two values are
+compared, and the result of that comparison determines the
+overall result of the tuple comparison. If all the elements
+are equal, then the tuples themselves are equal.
 */
 
 print("A Tuple of Comparisons:")
@@ -84,6 +88,7 @@ print("TERNARY CONDITIONAL OPERATIONS")
 
 let ballStatus = 420 > 69
 
+// If ballStatus is true, Fuck it!! If not? We Ball!!
 ballStatus ? print("FUCK IT!!") : print("WE BALL!!")
 
 // Nil Coalescing Operations
