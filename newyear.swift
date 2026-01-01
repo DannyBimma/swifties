@@ -159,7 +159,6 @@ enum Fireworks {
 }
 
 // Display ASCII art text
-
 enum ASCIIArt {
     static let happyNewYear = """
 
@@ -216,21 +215,9 @@ enum ASCIIArt {
     }
 }
 
-// Display footer decor
-enum Decorations {
-    static let sparkles = """
-
-        ✨ 🎆 🎇 🥳 🎉 🍾 🥂 🎊 🎇 🎆 ✨
-
-        """
-
-    static func display() {
-        print(sparkles)
-    }
-}
-
 // Main
 ProgressBar.display()
 Fireworks.display()
 ASCIIArt.display()
-Decorations.display()
+
+print("\n")
