@@ -94,3 +94,14 @@ ballStatus ? print("FUCK IT!!") : print("WE BALL!!")
 // Nil Coalescing Operations
 print("\n")
 print("NIL COALESCING OPERATIONS")
+
+let defaultPosition: Int = 69
+var userPosition: Int?  // Defaults to nil is not set
+var appliedPostion = userPosition ?? defaultPosition
+
+print("Applied Position (no userPosition set):", appliedPostion)
+
+userPosition = 420  // Set userPosition to 420
+appliedPostion = userPosition ?? defaultPosition
+
+print("Applied Position (userPosition set):", appliedPostion)
