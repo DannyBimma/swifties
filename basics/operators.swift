@@ -105,3 +105,7 @@ userPosition = 420  // Set userPosition to 420
 appliedPostion = userPosition ?? defaultPosition
 
 print("Applied Position (userPosition set):", appliedPostion)
+
+// Range Operations
+print("\n")
+print("RANGE OPERATIONS")
