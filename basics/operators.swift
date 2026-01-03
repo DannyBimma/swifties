@@ -96,7 +96,7 @@ print("\n")
 print("NIL COALESCING OPERATIONS")
 
 let defaultPosition: Int = 69
-var userPosition: Int?  // Defaults to nil is not set
+var userPosition: Int?  // Defaults to nil if not set
 var appliedPostion = userPosition ?? defaultPosition
 
 print("Applied Position (no userPosition set):", appliedPostion)
