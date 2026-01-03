@@ -6,7 +6,7 @@
 * Copyright (c) 2025 Technomancer Pirate Captain. All Rights Reserved.
 */
 
-// Assignment Operations
+// NOTE: Assignment Operations
 print("\n")
 print("VALUES OF OBJECTS")
 
@@ -26,7 +26,7 @@ print("x: \(x)")
 print("y: \(y)")
 print("z: \(z)")
 
-// Arithmetic Operations
+// NOTE: Arithmetic Operations
 print("\n")
 print("ARITHMETIC" + " " + "OPERATIONS")
 
@@ -36,7 +36,7 @@ print("101 * 10 =", " ", 101 * 10)
 print("144 % 14 =", " ", 144 % 14)
 print("4.2 / 6.9 =", " ", 4.2 / 6.9)
 
-/*NOTE:
+/*
 Unlike the arithmetic operators in C and Objective-C,
 the Swift arithmetic operators don’t allow values to
 overflow by default. You can opt in to value overflow
@@ -46,7 +46,7 @@ behaviour by using Swift’s overflow operators
 let intOverflow: Int = Int.max &+ 69
 print("intOverflow: \(intOverflow)")
 
-// Compound Assignment Operations
+// NOTE: Compound Assignment Operations
 print("\n")
 print("COMPOUND ASSIGNMENT OPERATIONS")
 
@@ -56,7 +56,7 @@ count3 += 420
 
 print("count3: \(count3)")
 
-// Comparison Operations
+// NOTE: Comparison Operations
 print("\n")
 print("COMPARISON OPERATIONS")
 
@@ -67,7 +67,7 @@ print(69 < 420)
 print(69 >= 420)
 print(69 <= 420)
 
-/*NOTE:
+/*
 You can compare two tuples if they have the same type
 and the same number of values. Tuples are compared from
 left to right, one value at a time, until the comparison
@@ -82,7 +82,7 @@ print((420, "Luffy") < (69, "Nami"))
 print((3, "Sanji") < (4, "Zoro"))
 print((45, "Chopper") == (38, "Franky"))
 
-// Ternary Conditional Operations
+// NOTE: Ternary Conditional Operations
 print("\n")
 print("TERNARY CONDITIONAL OPERATIONS")
 
@@ -91,7 +91,7 @@ let ballStatus = 420 > 69
 // If ballStatus is true, Fuck it!! If not? We Ball!!
 ballStatus ? print("FUCK IT!!") : print("WE BALL!!")
 
-// Nil Coalescing Operations
+// NOTE: Nil Coalescing Operations
 print("\n")
 print("NIL COALESCING OPERATIONS")
 
@@ -106,6 +106,44 @@ appliedPostion = userPosition ?? defaultPosition
 
 print("Applied Position (userPosition set):", appliedPostion)
 
-// Range Operations
+// NOTE: Range Operations
 print("\n")
 print("RANGE OPERATIONS")
+
+// Iterate over every integer from 47 to 69 (inclusive)
+// and multiply it by 69
+for i in 47...69 {
+    print("\(i) times 69 is \(i * 69)")
+}
+
+print("Non-inclusive of final value:")
+
+// Open range: Non-inclusive of final value
+for i in 47..<69 {
+    print("\(i) times 69 is \(i * 69)")
+}
+
+// One-sided range: From initial value to Max Int??
+// Overflow??
+// Who knows?? Let's fucking find out!!
+/*
+for i in 69... {
+    print("\(i) times 69 is \(i * 69)")
+}
+*/ // it does lol
+
+// One sided range can also be non-inclusive of final value/s
+print("Iterate over an arrange with range operator:")
+
+let favStrawhats = ["Luffy", "Nami", "Zoro", "Usopp", "Sanji"]
+
+for member in favStrawhats[..<2] {
+    print(member)
+}
+
+// Check if range contain particular value
+if favStrawhats.contains("Luffy") {
+    print("Luffy is my mother-fucking MC!!")
+}
+
+print(favStrawhats.contains("Luffy"))
