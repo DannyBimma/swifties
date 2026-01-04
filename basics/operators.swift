@@ -124,13 +124,13 @@ for i in 47..<69 {
 }
 
 // One-sided range: From initial value to Max Int??
-// Overflow??
+// Will it overflow?? Will it even run??
 // Who knows?? Let's fucking find out!!
 /*
 for i in 69... {
     print("\(i) times 69 is \(i * 69)")
 }
-*/ // it does lol
+*/ // It does run, loll!! But it's a VERY bad idea LMAOOO!!!
 
 // One sided range can also be non-inclusive of final value/s
 print("Iterate over an arrange with range operator:")
