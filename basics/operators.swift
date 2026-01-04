@@ -147,3 +147,33 @@ if favStrawhats.contains("Luffy") {
 }
 
 print(favStrawhats.contains("Luffy"))
+
+// NOTE: Logical Operations
+print("\n")
+print("LOGICAL OPERATIONS")
+
+// Swift supports the 3 classics
+// The !bang, &&, and ||
+
+let passwordEnteredCorrectly = false
+let successfulBioScan = true
+let securityOveride = true
+
+if !passwordEnteredCorrectly {
+    print("Incorrect password! Please try again!!")
+}
+
+if successfulBioScan && !passwordEnteredCorrectly {
+    print("Access Denied!!")
+}
+
+if !successfulBioScan || !passwordEnteredCorrectly {
+    print("Something has gone terribly awry!! Please check your password or FaceID!!")
+}
+
+// In Swift, you can daisy-chain logical operators to combine expressions
+if passwordEnteredCorrectly && successfulBioScan || securityOveride {
+    print("Access Granted!!")
+} else {
+    print("Access Denied!!")
+}
