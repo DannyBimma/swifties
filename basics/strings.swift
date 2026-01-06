@@ -26,7 +26,7 @@ let stringMessage = """
 
     Another super awesome benefit; is how it allows you to have
     the format of a long message or story in your source code be
-    perfectly preserved in the output of your program.
+    perfectly preserved in the output of your program.\n
     """
 
 print(stringMessage)
