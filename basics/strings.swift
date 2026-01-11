@@ -38,6 +38,7 @@ let stringMessage = """
 print(stringMessage)
 
 /*
+NOTE:
 You can include special characters in String Literals without
 invoking their effect by using "Extended String Delimiters."
 */
@@ -48,3 +49,56 @@ print("EXTENDED STRING DELIMITERS")
 let newLine = #"\n"#
 
 print("The new line escape sequence is: \(newLine)")
+
+/*
+NOTE:
+You can initialise an empty string by using an empty string literal or,
+you can make use of the String initialiser in Swift. Both examples below
+create an empty string.
+*/
+
+print("\n")
+print("EMPTY STRINGS")
+
+let nothing = ""
+let aintShit = String()
+
+// NOTE: Find out if a String is empty by checking its Boolean isEmpty property
+
+if aintShit.isEmpty {
+    print("aintShit: Aint shit in here!")
+} else {
+    print("aintShit: Shit is in here!")
+}
+
+/*
+NOTE:
+Access individual Char values in a String by iterating over the string with a
+for-in loop. Alternatively, create a stand-alone Char from a single-character
+string literal by providing a Character type annotation.
+*/
+
+print("\n")
+print("CHARACTER VALUES")
+print("Call Sign Characters:")
+
+for c in callSign {
+    print(c)
+}
+
+/*
+NOTE:
+String values can be constructed by passing an array of Chars as an argument to
+the String initialiser.
+*/
+
+print()
+
+let callSignChars: [Character] = [
+    "T", "e", "c", "h", "n", "o", "m", "a", "n", "c", "e", "r", " ", "P", "i", "r", "a", "t", "e",
+    " ", "C", "a", "p", "t", "a", "i", "n", " ", "\u{1F3F4}", "\u{200D}", "\u{2620}",
+]
+
+let callSignString = String(callSignChars)
+
+print("Call Sign String: \(callSignString)")
