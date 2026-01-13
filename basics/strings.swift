@@ -102,3 +102,22 @@ let callSignChars: [Character] = [
 let callSignString = String(callSignChars)
 
 print("Call Sign String: \(callSignString)")
+
+// NOTE: String and Char Concatenation
+
+print("\n")
+print("STRING CONCATENATION")
+
+let firstMember = "Luffy,"
+let secondMember = "Zoro,"
+let thirdMember = "Usopp,"
+let fourthMember = "Nami,"
+let coordinatingConjunction = "and"
+let fifthMember = "Sanji."
+
+let theOriginalStrawhats = """
+
+    \(firstMember) \(secondMember) \(thirdMember) \(fourthMember) \(coordinatingConjunction) \(fifthMember)
+
+    """
+print("The Original Members of the Strawhat Crew are: \(theOriginalStrawhats)")
