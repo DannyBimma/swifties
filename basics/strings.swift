@@ -106,18 +106,32 @@ print("Call Sign String: \(callSignString)")
 // NOTE: String and Char Concatenation
 
 print("\n")
-print("STRING CONCATENATION")
+print("STRING INTERPOLATION")
 
-let firstMember = "Luffy,"
-let secondMember = "Zoro,"
-let thirdMember = "Usopp,"
+let firstMember = "Luffy, "
+let secondMember = "Zoro, "
+let thirdMember = "Usopp, "
 let fourthMember = "Nami,"
-let coordinatingConjunction = "and"
+var coordinatingConjunction = "and"
 let fifthMember = "Sanji."
 
 let theOriginalStrawhats = """
 
-    \(firstMember) \(secondMember) \(thirdMember) \(fourthMember) \(coordinatingConjunction) \(fifthMember)
-
+    \(firstMember) 
+    \(secondMember) 
+    \(thirdMember) 
+    \(fourthMember) \(coordinatingConjunction) \(fifthMember)
     """
+
 print("The Original Members of the Strawhat Crew are: \(theOriginalStrawhats)")
+
+// NOTE: String Concatenation
+
+print("\n")
+print("STRING CONCATENATION")
+
+// Apple does have a sense of humour, pretty cool 😂
+coordinatingConjunction += " "
+
+print("The Monster Trio of the Crew are:")
+print(firstMember + secondMember + coordinatingConjunction + fifthMember)
