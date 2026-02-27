@@ -141,7 +141,7 @@ for member in favStrawhats[..<2] {
     print(member)
 }
 
-// Check if range contain particular value
+// Check if range contains particular value
 if favStrawhats.contains("Luffy") {
     print("Luffy is my mother-fucking MC!!")
 }
