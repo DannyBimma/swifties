@@ -7,7 +7,8 @@ print("\n")  // new line character is not blessed by the syntax highlighting god
 
 // Constants are declared with the let keyword and are immutable.
 let myName = "DannyBimma"
-let title = "the man who will become King of the iOS Developers"
+let title = "the Technomancer Pirate Captain"
+let declaration = "the man who will become King of the iOS Developers"
 
 let currentYear = Calendar.current.component(.year, from: Date())
 let publicationYear = 1997
@@ -20,8 +21,9 @@ publicationRun = currentYear - publicationYear
 print(
     """
     Hello, world! 
-    My name is \(myName); I am \(title), 
-    and my story has been in publication for \(publicationRun) years now!
+    My name is \(myName), \(title)! 
+    I am \(declaration), 
+    and my epic tale has been in publication for \(publicationRun) years now!
     """
 )
 
