@@ -20,11 +20,20 @@ publicationRun = currentYear - publicationYear
 // Swift supports string interpolation, and multi-line strings
 print(
     """
-    Hello, world! 
+    Hello, world!
+
     My name is \(myName), \(title)! 
     I am \(declaration), 
     and my epic tale has been in publication for \(publicationRun) years now!
     """
 )
+
+print()
+
+// Values in Swift are never implicitly converted to another type.
+// You must be explicit widdit.
+let rating: Float = 9
+
+print("My shōnen manga rating: \(rating)")
 
 print("\n")
