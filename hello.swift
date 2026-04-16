@@ -15,7 +15,11 @@
 
 import Foundation
 
-print("\n")  // the print function auto inserts a newline, so this statement outputs 2
+/*
+The print() function in Swift auto inserts a newline character much like puts()
+in C. Thus, the statement below outputs 2 new lines.
+*/
+print("\n")
 
 // Constants are declared with the let keyword.
 let myName = "DannyBimma"
