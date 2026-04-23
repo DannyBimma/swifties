@@ -48,7 +48,10 @@ print()
 
 // Values in Swift are never implicitly converted to another type.
 let rating: Float = 9  // you must be explicit widdit.
+let decade: Float = 10
+let andThenSome: Float = 7.5
 
 print("My shōnen manga rating: \(rating)")  // this outputs a floating point number
+print("My anime show run: \((decade * 2) + andThenSome) (years)")
 
 print("\n")
