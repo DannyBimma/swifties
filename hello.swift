@@ -61,18 +61,19 @@ their elements are accessed using an index or key respectively.
 You are also allowed to place a comma after the last element
 for reasons.
 */
-var strawatCrew = [
+var strawhatCrew = [
     "Roronoa Zolo", "Nami", "Usopp", "Vinsmoke Sanji", "Tony Tony Chopper", "Nico Robin", "Franky",
     "Brook", "Jinebe",
 ]
 
-strawatCrew.insert("Monkey D. Luffy", at: 0)  // Automatically grows as elements are added
+strawhatCrew.insert("Monkey D. Luffy", at: 0)  // Automatically grows as elements are added
 
 var aliases = [
-    strawatCrew[0]: "Straw Hat", strawatCrew[1]: "Pirate Hunter", strawatCrew[2]: "Cat Burglar",
-    strawatCrew[3]: "God",
-    strawatCrew[4]: "Black leg", strawatCrew[5]: "Chopper", strawatCrew[6]: "Devil Child",
-    strawatCrew[7]: "Franky", strawatCrew[8]: "Soul King", strawatCrew[9]: "First Son of the Sea",
+    strawhatCrew[0]: "Straw Hat", strawhatCrew[1]: "Pirate Hunter", strawhatCrew[2]: "Cat Burglar",
+    strawhatCrew[3]: "God",
+    strawhatCrew[4]: "Black leg", strawhatCrew[5]: "Chopper", strawhatCrew[6]: "Devil Child",
+    strawhatCrew[7]: "Franky", strawhatCrew[8]: "Soul King",
+    strawhatCrew[9]: "First Son of the Sea",
 ]
 
 var crewRoles = [
