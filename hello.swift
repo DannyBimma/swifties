@@ -84,9 +84,26 @@ var crewRoles = [
     aliases["Brook"]: "Musician", aliases["Jinebe"]: "Helmsman",
 ]
 
+print(
+    """
+    These are the members of my unstoppable Yonko Pirate crew, in the
+    order of when each of them become my best freind:
+    """)
+
+print()
+
 /*
 Swift uses "if" and "switch" statements for conditionals. And "for-in",
 "while" and "repeat-while" statements for loops.
 */
+
+for (member) in strawhatCrew {
+    // Parentheses around the condition or loop variable are optional
+    if member != "Monkey D. Luffy" { print(member) }
+}
+
+print()
+
+print("With the exception of me of course 😜!")
 
 print("\n")
