@@ -33,27 +33,9 @@ let publicationYear = 1997
 var publicationRun: Int
 publicationRun = currentYear - publicationYear
 
-// Swift supports string interpolation, and multi-line strings
-print(
-    """
-    Hello, world!
-
-    My name is \(myName), \(title)! 
-    I am \(declaration), 
-    and my epic tale has been in publication for \(publicationRun) years now!
-    """
-)
-
-print()
-
 let mangaRating: Float = 10  // Values in Swift are never implicitly converted
 let animeRating: Float = 8.5  // Ya must be explicit widdit
 let animeRatingAdjustment: Float = 2.5
-
-print("Shōnen manga rating: \(mangaRating)")  // This outputs a floating point number
-print("Anime show rating: \((animeRating + mangaRating) / animeRatingAdjustment)")
-
-print()
 
 /*
 Arrays and Dicts are initialised with square bracket notation and
@@ -83,6 +65,24 @@ var crewRoles = [
     aliases["Nico Robin"]: "Archaeologist", aliases["Franky"]: "Shipwright",
     aliases["Brook"]: "Musician", aliases["Jinebe"]: "Helmsman",
 ]
+
+// Swift supports string interpolation, and multi-line strings
+print(
+    """
+    Hello, world!
+
+    My name is \(myName), \(title)! 
+    I am \(declaration), 
+    and my epic tale has been in publication for \(publicationRun) years now!
+    """
+)
+
+print()
+
+print("Shōnen manga rating: \(mangaRating)")  // This outputs a floating point number
+print("Anime show rating: \((animeRating + mangaRating) / animeRatingAdjustment)")
+
+print()
 
 print(
     """
