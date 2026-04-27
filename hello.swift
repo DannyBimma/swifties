@@ -24,7 +24,7 @@ print("\n")
 // Constants are declared with the let keyword.
 let myName = "DannyBimma"
 let title = "the Technomancer Pirate Captain"
-let declaration = "the man who will become King of the Apple Developers"
+let declaration = "the man who will become King of the Swift Developers"
 
 let currentYear = Calendar.current.component(.year, from: Date())
 let publicationYear = 1997
@@ -87,7 +87,7 @@ var crewRoles = [
 print(
     """
     These are the members of my unstoppable Yonko Pirate crew, in the
-    order of when each of them become my best freind:
+    order of when each of them became my best freind:
     """)
 
 print()
@@ -99,11 +99,11 @@ Swift uses "if" and "switch" statements for conditionals. And "for-in",
 
 for (member) in strawhatCrew {
     // Parentheses around the condition or loop variable are optional
-    if member != "Monkey D. Luffy" { print(member) }
+    if member != strawhatCrew[0] { print(member) }
 }
 
 print()
 
-print("With the exception of me of course 😜!")
+print("With the exception of me, the Captain, of course 😜!")
 
 print("\n")
