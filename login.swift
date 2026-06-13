@@ -4,7 +4,7 @@ let pswrd = "123"
 let maxAttempts = 3
 var attempts = 0
 
-print("Please enter your username and password!\n")
+print("Please enter your and password!\n")
 print("You only have \(maxAttempts) attempts:\n")
 
 while attempts <= maxAttempts {
