@@ -26,7 +26,7 @@ func goalRecorder(goals: [Int]) -> (leastGoals: Int, mostGoals: Int, totalGoals:
 }
 
 let worldCupGoals = goalRecorder(goals: [
-    2, 0, 2, 1, 1, 1, 4, 1, 1, 1, 1, 1, 0, 1, 2, 0, 7, 1, 2, 2, 1, 0, 5, 1, 0, 0, 1, 1, 1, 1, 1, 1,
+    2, 0, 2, 1, 1, 1, 4, 1, 1, 1, 1, 1, 0, 1, 2, 0, 7, 1, 2, 2, 1, 0, 5, 1, 0, 0, 1, 1, 1, 1, 2, 2,
 ])
 
 print("===GOALS SCORED IN THE 2026 WORLD CUP===")
