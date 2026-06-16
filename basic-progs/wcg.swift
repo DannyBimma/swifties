@@ -28,3 +28,13 @@ func goalProcessor(goals: [Int]) -> (goalMin: Int, goalmax: Int, gotalTotal: Int
 
     return (goalMin, goalMax, goalTotal)
 }
+
+// Init goals scored in processor's parameter
+let goalTally = goalProcessor(goals: worldCupGoals)
+
+print()
+print("===GOALS SCORED IN THE 2026 WORLD CUP===\n")
+print("Most: \(goalTally.goalmax)")
+print("Least: \(goalTally.goalMin)")
+print("Total: \(goalTally.gotalTotal)")
+print()
