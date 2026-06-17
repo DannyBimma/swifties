@@ -7,9 +7,19 @@
 */
 
 // Keep track of goals in an array
-let worldCupGoals = [
+var worldCupGoals = [
     2, 0, 2, 1, 1, 1, 4, 1, 1, 1, 1, 1, 0, 1, 2, 0, 7, 1, 2, 2, 1, 0, 5, 1, 0, 0, 1, 1, 1, 1, 2, 2,
 ]
+
+// Goals on 16/06/2026
+worldCupGoals.append(3)
+worldCupGoals.append(1)
+
+worldCupGoals.append(1)
+worldCupGoals.append(4)
+
+worldCupGoals.append(3)
+worldCupGoals.append(0)
 
 func goalProcessor(goals: [Int]) -> (goalMin: Int, goalmax: Int, gotalTotal: Int) {
     var goalMin = goals[0]
