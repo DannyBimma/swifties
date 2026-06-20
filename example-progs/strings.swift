@@ -20,19 +20,19 @@ print("MULTILINE STRING LITERALS")
 
 let stringMessage = """
 
-    If you need a string that spans several lines in your program;
-    or you simply want a very long message to be printed to the
-    console without wrapping, Swift allows you to use multiline 
-    string literals for exaxctly this \u{1F44D}\u{1F3FE}
+     If you need a string that spans several lines in your program;
+     or you simply want a very long message to be printed to the
+     console without wrapping, Swift allows you to use multiline 
+     string literals for exaxctly this \u{1F44D}\u{1F3FE}
 
-    Another super awesome benefit: is how it allows you to have
-    the format of a long message or story in your source code be
-    perfectly preserved in the output of your program \u{1F4BB}
+     Another super awesome benefit: is how it allows you to have
+     the format of a long message or story in your source code be
+     perfectly preserved in the output of your program \u{1F4BB}
 
-    The Swift programming language fucks \u{1F60E}!!\n
-    P.s. You can also just include emoji and new lines
-    directly instead of using escape sequences... 
-    Swift just goes that fucking hard 😮‍💨
+     The Swift programming language fucks \u{1F60E}!!\n
+     P.s. You can also just include emoji and new lines
+     directly instead of using escape sequences... 
+     Swift just goes that fucking hard 😮‍💨
     """
 
 print(stringMessage)
