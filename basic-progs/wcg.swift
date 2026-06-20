@@ -34,7 +34,32 @@ worldCupGoals.append(2)
 worldCupGoals.append(1)
 worldCupGoals.append(0)
 
-//TODO: Uzbekistan vs Colombia
+worldCupGoals.append(1)
+worldCupGoals.append(3)
+
+worldCupGoals.append(1)
+worldCupGoals.append(1)
+
+worldCupGoals.append(4)
+worldCupGoals.append(1)
+
+worldCupGoals.append(6)
+worldCupGoals.append(0)
+
+worldCupGoals.append(1)
+worldCupGoals.append(0)
+
+worldCupGoals.append(2)
+worldCupGoals.append(0)
+
+worldCupGoals.append(0)
+worldCupGoals.append(1)
+
+worldCupGoals.append(3)
+worldCupGoals.append(0)
+
+worldCupGoals.append(0)
+worldCupGoals.append(1)
 
 func goalProcessor(goals: [Int]) -> (goalMin: Int, goalmax: Int, gotalTotal: Int) {
     var goalMin = goals[0]
