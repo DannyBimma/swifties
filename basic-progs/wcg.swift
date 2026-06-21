@@ -61,6 +61,18 @@ worldCupGoals.append(0)
 worldCupGoals.append(0)
 worldCupGoals.append(1)
 
+worldCupGoals.append(5)
+worldCupGoals.append(1)
+
+worldCupGoals.append(0)
+worldCupGoals.append(0)
+
+worldCupGoals.append(2)
+worldCupGoals.append(1)
+
+worldCupGoals.append(0)
+worldCupGoals.append(4)
+
 func goalProcessor(goals: [Int]) -> (goalMin: Int, goalmax: Int, gotalTotal: Int) {
     var goalMin = goals[0]
     var goalMax = goals[0]
