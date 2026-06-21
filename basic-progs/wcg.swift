@@ -37,6 +37,7 @@ worldCupGoals.append(0)
 worldCupGoals.append(1)
 worldCupGoals.append(3)
 
+// Goals on 18/06/2026
 worldCupGoals.append(1)
 worldCupGoals.append(1)
 
@@ -49,6 +50,7 @@ worldCupGoals.append(0)
 worldCupGoals.append(1)
 worldCupGoals.append(0)
 
+// Goals on 19/06/2026
 worldCupGoals.append(2)
 worldCupGoals.append(0)
 
@@ -61,6 +63,7 @@ worldCupGoals.append(0)
 worldCupGoals.append(0)
 worldCupGoals.append(1)
 
+// Goals on 20/06/2026
 worldCupGoals.append(5)
 worldCupGoals.append(1)
 
@@ -70,6 +73,7 @@ worldCupGoals.append(0)
 worldCupGoals.append(2)
 worldCupGoals.append(1)
 
+// Goals on 21/06/2026
 worldCupGoals.append(0)
 worldCupGoals.append(4)
 
