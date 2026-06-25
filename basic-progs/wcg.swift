@@ -89,8 +89,34 @@ worldCupGoals.append(0)
 worldCupGoals.append(2)
 worldCupGoals.append(2)
 
-//TODO:
 // Goals on 22/06/2026
+worldCupGoals.append(2)
+worldCupGoals.append(0)
+
+worldCupGoals.append(3)
+worldCupGoals.append(0)
+
+worldCupGoals.append(3)
+worldCupGoals.append(2)
+
+worldCupGoals.append(1)
+worldCupGoals.append(2)
+
+// Goals on 23/06/2026
+worldCupGoals.append(5)
+worldCupGoals.append(0)
+
+worldCupGoals.append(0)
+worldCupGoals.append(0)
+
+worldCupGoals.append(0)
+worldCupGoals.append(1)
+
+worldCupGoals.append(1)
+worldCupGoals.append(0)
+
+// Goals on 24/06/2026
+//TODO: Add goals
 
 func goalProcessor(goals: [Int]) -> (goalMin: Int, goalmax: Int, gotalTotal: Int) {
     var goalMin = goals[0]
