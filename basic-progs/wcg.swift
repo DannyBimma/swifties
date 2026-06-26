@@ -156,14 +156,24 @@ worldCupGoals.append(0)
 // Goals on 26/06/2026
 //TODO:
 
-func matchProcessor(matches: [Int]) -> (Int) {
-    var matchesPlayed = 0
+func matchProcessor(matches: [Int]) -> (matchCount: Int, goalessDraws: Int) {
+    var teamMatchCount = 0
+    var goalessDraws = 0
+    var matchCount = 0
 
     for _ in matches {
-        matchesPlayed += 1
+        teamMatchCount += 1
     }
 
-    return matchesPlayed / 2
+    matchCount = teamMatchCount / 2
+
+    for (current, next) in zip(matches, matches.dropFirst()) {
+        if current == 0 && next == 0 {
+            goalessDraws += 1
+        }
+    }
+
+    return (matchCount, goalessDraws)
 }
 
 func goalProcessor(goals: [Int]) -> (goalMin: Int, goalmax: Int, gotalTotal: Int) {
@@ -191,9 +201,10 @@ let goalTally = goalProcessor(goals: worldCupGoals)
 let matchTally = matchProcessor(matches: worldCupGoals)
 
 print()
-print("===GOALS SCORED IN THE 2026 WORLD CUP===\n")
-print("Matches Played: \(matchTally)")
-print("Most: \(goalTally.goalmax)")
-print("Least: \(goalTally.goalMin)")
-print("Total: \(goalTally.gotalTotal)")
+print("===2026 WORLD CUP STATS===\n")
+print("Matches Played: \(matchTally.matchCount)")
+print("Goaless Draws: \(matchTally.goalessDraws)")
+print("Most Goals (per team): \(goalTally.goalmax)")
+print("Least Goals (per team): \(goalTally.goalMin)")
+print("Total Goals (in tournament): \(goalTally.gotalTotal)")
 print()
