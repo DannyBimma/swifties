@@ -156,6 +156,16 @@ worldCupGoals.append(0)
 // Goals on 26/06/2026
 //TODO:
 
+func matchProcessor(matches: [Int]) -> (Int) {
+    var matchesPlayed = 0
+
+    for currentMatch in matches {
+        matchesPlayed = (matchesPlayed + currentMatch) / 2
+    }
+
+    return matchesPlayed
+}
+
 func goalProcessor(goals: [Int]) -> (goalMin: Int, goalmax: Int, gotalTotal: Int) {
     var goalMin = goals[0]
     var goalMax = goals[0]
@@ -176,6 +186,9 @@ func goalProcessor(goals: [Int]) -> (goalMin: Int, goalmax: Int, gotalTotal: Int
 
 // Init goals scored in processor's parameter
 let goalTally = goalProcessor(goals: worldCupGoals)
+
+// Init matches played in processor's parameter
+let matchTally = matchProcessor(matches: worldCupGoals)
 
 print()
 print("===GOALS SCORED IN THE 2026 WORLD CUP===\n")
