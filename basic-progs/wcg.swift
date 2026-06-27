@@ -204,10 +204,8 @@ func goalProcessor(goals: [Int]) -> (goalMin: Int, goalmax: Int, gotalTotal: Int
     return (goalMin, goalMax, goalTotal)
 }
 
-// Init goals scored in processor's parameter
+// Init return values from processor functions
 let goalTally = goalProcessor(goals: worldCupGoals)
-
-// Init matches played in processor's parameter
 let matchTally = matchProcessor(matches: worldCupGoals)
 
 print()
