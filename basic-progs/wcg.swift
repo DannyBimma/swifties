@@ -1,5 +1,6 @@
 /*
-* Routine: A program that keeps a record of goals scored in the 2026 World Cup.
+* Routine: A program that keeps a record of interesting stats from the
+*          2026 World Cup.
 *
 * Author:  DannyBimma
 *
@@ -176,27 +177,20 @@ worldCupGoals.append(1)
 //TODO:
 
 func matchProcessor(matches: [Int]) -> (matchCount: Int, goalessDraws: Int, mostGoals: Int) {
-    var teamMatchCount = 0
+    let matchCount = matches.count / 2
     var goalessDraws = 0
-    var matchCount = 0
-    var matchGoals = 0
     var mostGoals = 0
 
-    for _ in matches {
-        teamMatchCount += 1
-    }
+    // Stride through the array indices in steps of 2 (match logic)
+    for i in stride(from: 0, to: matches.count - 1, by: 2) {
+        let homeTeamGoals = matches[i]
+        let awayTeamGoals = matches[i + 1]
 
-    matchCount = teamMatchCount / 2
-
-    for (current, next) in zip(matches, matches.dropFirst()) {
-        if current == 0 && next == 0 {
+        if homeTeamGoals == 0 && awayTeamGoals == 0 {
             goalessDraws += 1
         }
-    }
 
-    for (current, next) in zip(matches, matches.dropFirst()) {
-        matchGoals = current + next
-
+        let matchGoals = homeTeamGoals + awayTeamGoals
         if matchGoals > mostGoals {
             mostGoals = matchGoals
         }
