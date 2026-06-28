@@ -202,14 +202,14 @@ func matchProcessor(matches: [Int]) -> (matchCount: Int, goalessDraws: Int, most
 
     // Stride through the array indices in steps of 2 (match logic)
     for i in stride(from: 0, to: matches.count - 1, by: 2) {
-        let homeTeamGoals = matches[i]
-        let awayTeamGoals = matches[i + 1]
+        let teamA = matches[i]
+        let teamB = matches[i + 1]
 
-        if homeTeamGoals == 0 && awayTeamGoals == 0 {
+        if teamA == 0 && teamB == 0 {
             goalessDraws += 1
         }
 
-        let matchGoals = homeTeamGoals + awayTeamGoals
+        let matchGoals = teamA + teamB
         if matchGoals > mostGoals {
             mostGoals = matchGoals
         }
