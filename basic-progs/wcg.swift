@@ -7,10 +7,61 @@
 * Copyright (c) 2026 Technomancer Pirate Captain. All Rights Reserved.
 */
 
-// Keep track of goals in an array
-var worldCupGoals = [
-    2, 0, 2, 1, 1, 1, 4, 1, 1, 1, 1, 1, 0, 1, 2, 0, 7, 1, 2, 2, 1, 0, 5, 1, 0, 0, 1, 1, 1, 1, 2, 2,
-]
+// Declare goal tracker array
+var worldCupGoals: [Int] = []
+
+// Goals on 11/06/2026
+worldCupGoals.append(2)
+worldCupGoals.append(0)
+
+worldCupGoals.append(2)
+worldCupGoals.append(1)
+
+// Goals on 12/06/2026
+worldCupGoals.append(1)
+worldCupGoals.append(1)
+
+worldCupGoals.append(4)
+worldCupGoals.append(1)
+
+// Goals on 13/06/2026
+worldCupGoals.append(1)
+worldCupGoals.append(1)
+
+worldCupGoals.append(1)
+worldCupGoals.append(1)
+
+worldCupGoals.append(0)
+worldCupGoals.append(1)
+
+// Goals on 14/06/2026
+worldCupGoals.append(2)
+worldCupGoals.append(0)
+
+worldCupGoals.append(7)
+worldCupGoals.append(1)
+
+worldCupGoals.append(2)
+worldCupGoals.append(2)
+
+worldCupGoals.append(1)
+worldCupGoals.append(0)
+
+worldCupGoals.append(5)
+worldCupGoals.append(1)
+
+// Goals on 15/06/2026
+worldCupGoals.append(0)
+worldCupGoals.append(0)
+
+worldCupGoals.append(1)
+worldCupGoals.append(1)
+
+worldCupGoals.append(1)
+worldCupGoals.append(1)
+
+worldCupGoals.append(2)
+worldCupGoals.append(2)
 
 // Goals on 16/06/2026
 worldCupGoals.append(3)
@@ -68,27 +119,27 @@ worldCupGoals.append(1)
 worldCupGoals.append(5)
 worldCupGoals.append(1)
 
-worldCupGoals.append(0)
-worldCupGoals.append(0)
-
 worldCupGoals.append(2)
 worldCupGoals.append(1)
+
+worldCupGoals.append(0)
+worldCupGoals.append(0)
 
 // Goals on 21/06/2026
 worldCupGoals.append(0)
 worldCupGoals.append(4)
 
-worldCupGoals.append(0)
-worldCupGoals.append(0)
-
-worldCupGoals.append(1)
-worldCupGoals.append(3)
-
 worldCupGoals.append(4)
 worldCupGoals.append(0)
 
+worldCupGoals.append(0)
+worldCupGoals.append(0)
+
 worldCupGoals.append(2)
 worldCupGoals.append(2)
+
+worldCupGoals.append(1)
+worldCupGoals.append(3)
 
 // Goals on 22/06/2026
 worldCupGoals.append(2)
@@ -207,14 +258,14 @@ func matchProcessor(matches: [Int]) -> (matchCount: Int, goalessDraws: Int, most
 
     // Stride through the array indices in steps of 2 (match logic)
     for i in stride(from: 0, to: matches.count - 1, by: 2) {
-        let teamA = matches[i]
-        let teamB = matches[i + 1]
+        let teamAgoals = matches[i]
+        let teamBgoals = matches[i + 1]
 
-        if teamA == 0 && teamB == 0 {
+        if teamAgoals == 0 && teamBgoals == 0 {
             goalessDraws += 1
         }
 
-        let matchGoals = teamA + teamB
+        let matchGoals = teamAgoals + teamBgoals
         if matchGoals > mostGoals {
             mostGoals = matchGoals
         }
