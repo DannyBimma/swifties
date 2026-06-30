@@ -1,7 +1,7 @@
 // Arrays and Dictionaries
 
 // Init array of original crew members
-var strawHats = ["Luffy", "Zoro", "Nami", "Usopp"]
+var strawHats = ["Zoro", "Usopp", "Nami"]
 
 // Init a dictionary for crew members and their roles
 var crewRoles = [
@@ -12,31 +12,18 @@ var crewRoles = [
     "Usopp": "Sniper",
 ]
 
-// Add elements to array, they are dynamic in Swift
-strawHats.append("Chopper")
+// Add elements to the array, they are dynamic in Swift
+strawHats.append("Sanji")
+strawHats += ["Chopper", "Robin", "Franky", "Jinbei"]
+strawHats.insert("Luffy", at: 0)
 
-// Same for the dictionaries
-crewRoles["Chopper"] = "Doctor"
-crewRoles["Franky"] = "Shipwright"
-crewRoles["Robin"] = "Archaeologist"
-crewRoles["Jinbei"] = "Helmsman"
-
-print(strawHats)
-print()
-print(strawHats[0])
-print()
-print(crewRoles)
+// Use the handy count property to get the size of collections
+print("The Strawhat Yonko Pirate Crew has \(strawHats.count) members 🏴‍☠️:")
 print()
 
-/*
-Provide default value if key doesn't exist. Dicts always return
-an optional even if the key doesn't exist. This is because the
-optional provides a default value.
-*/
+// TODO: Init a dictionary
 
-print(crewRoles["Luffy"] ?? "Unknown")
-print()
-
-for (key, value) in crewRoles {
-    print("\(key) is a \(value)")
+// Iterate over the crew member array
+for crewMember in strawHats {
+    print(crewMember)
 }
