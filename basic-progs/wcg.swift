@@ -243,13 +243,28 @@ worldCupGoals.append(3)
 worldCupGoals.append(1)
 worldCupGoals.append(3)
 
+// NOTE:Round of 32
+
+var penaltyShootoutGoals: [Int] = []
 // Goals on 28/06/2026
 worldCupGoals.append(0)
 worldCupGoals.append(1)
 
-// Round of 32
 // Goals on 29/06/2026
-// TODO:
+worldCupGoals.append(2)
+worldCupGoals.append(1)
+
+worldCupGoals.append(1)
+worldCupGoals.append(1)
+penaltyShootoutGoals.append(3)
+penaltyShootoutGoals.append(4)
+
+worldCupGoals.append(1)
+worldCupGoals.append(1)
+penaltyShootoutGoals.append(2)
+penaltyShootoutGoals.append(3)
+
+// Goals on 30/06/2026
 
 func matchProcessor(matches: [Int]) -> (matchCount: Int, goalessDraws: Int, mostGoals: Int) {
     let matchCount = matches.count / 2
@@ -292,16 +307,38 @@ func goalProcessor(goals: [Int]) -> (goalMin: Int, goalmax: Int, gotalTotal: Int
     return (goalMin, goalMax, goalTotal)
 }
 
+func pkProcessor(koRoundGoals: [Int]) -> (shootouts: Int, pks: Int, mostPks: Int, totalPks: Int) {
+    let shootouts = koRoundGoals.count / 2
+    let pks = koRoundGoals.count
+    var mostPks = 0
+    var totalPks = 0
+
+    for i in stride(from: 0, to: koRoundGoals.count - 1, by: 2) {
+        let teamAGoals = koRoundGoals[i]
+        let teamBGoals = koRoundGoals[i + 1]
+
+        totalPks = teamAGoals + teamBGoals
+        if totalPks > mostPks {
+            mostPks = totalPks
+        }
+    }
+
+    return (shootouts, pks, mostPks, totalPks)
+}
+
 // Init return values from processor functions
 let goalTally = goalProcessor(goals: worldCupGoals)
 let matchTally = matchProcessor(matches: worldCupGoals)
+let pkTally = pkProcessor(koRoundGoals: penaltyShootoutGoals)
 
 print()
 print("===2026 WORLD CUP STATS===\n")
 print("Matches Played: \(matchTally.matchCount)")
 print("Goaless Draws: \(matchTally.goalessDraws)")
-print("Most Goals (per team): \(goalTally.goalmax)")
+print("Penalty Shootouts: \(pkTally.shootouts)")
+print("Penalty Kicks: \(pkTally.pks)")
+print("Most Goals (per team): \(goalTally.goalmax) ")
 print("Least Goals (per team): \(goalTally.goalMin)")
-print("Most Goals (per match): \(matchTally.mostGoals)")
-print("Total Goals (in tournament): \(goalTally.gotalTotal)")
+print("Most Goals (per match): \(matchTally.mostGoals) (\(pkTally.mostPks))")
+print("Total Goals (in tournament): \(goalTally.gotalTotal) (\(pkTally.totalPks))")
 print()
