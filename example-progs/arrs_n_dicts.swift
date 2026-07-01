@@ -3,27 +3,38 @@
 // Init array of original crew members
 var strawHats = ["Zoro", "Usopp", "Nami"]
 
-// Init a dictionary for crew members and their roles
-var crewRoles = [
-    "Luffy": "Captain",
-    "Zoro": "Vice Captain",
-    "Sanji": "Chef",
-    "Nami": "Navigator",
-    "Usopp": "Sniper",
-]
-
-// Add elements to the array, they are dynamic in Swift
+// Add elements to the array 3 different ways
 strawHats.append("Sanji")
 strawHats += ["Chopper", "Robin", "Franky", "Jinbei"]
 strawHats.insert("Luffy", at: 0)
 
-// Use the handy count property to get the size of collections
+// Use the handy array count property to get the size of collections
 print("The Strawhat Yonko Pirate Crew has \(strawHats.count) members 🏴‍☠️:")
 print()
-
-// TODO: Init a dictionary
 
 // Iterate over the crew member array
 for crewMember in strawHats {
     print(crewMember)
 }
+
+// NOTE: SETS
+print()
+print("===SETS IN THE CITY===")
+print()
+
+// Init a set of distinct numbers
+var distinctEvenNums: Set<Int> = [0, 2, 4, 6, 8, 16, 14]
+
+distinctEvenNums.insert(420)
+
+if distinctEvenNums.isEmpty {
+    print("Nobody has sets in this city.")
+} else {
+    print("This set of distinct even numbers contains \(distinctEvenNums.count) integers:")
+
+    for nums in distinctEvenNums {
+        print(nums)
+    }
+}
+
+// Set Operations
