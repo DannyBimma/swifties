@@ -265,6 +265,7 @@ penaltyShootoutGoals.append(2)
 penaltyShootoutGoals.append(3)
 
 // Goals on 30/06/2026
+// TODO:
 
 func matchProcessor(matches: [Int]) -> (matchCount: Int, goalessDraws: Int, mostGoals: Int) {
     let matchCount = matches.count / 2
@@ -307,29 +308,44 @@ func goalProcessor(goals: [Int]) -> (goalMin: Int, goalmax: Int, gotalTotal: Int
     return (goalMin, goalMax, goalTotal)
 }
 
-func pkProcessor(koRoundGoals: [Int]) -> (shootouts: Int, pks: Int, mostPks: Int, totalPks: Int) {
-    let shootouts = koRoundGoals.count / 2
-    let pks = koRoundGoals.count
-    var mostPks = 0
-    var totalPks = 0
+func pkProcessor(penalties: [Int]) -> (shootouts: Int, pks: Int, scored: Int, totalScored: Int) {
+    let shootouts = penalties.count / 2
+    var pks = 0
+    var teamAGoals = 0
+    var teamBGoals = 0
+    var scored = 0
+    var totalScored = 0
 
-    for i in stride(from: 0, to: koRoundGoals.count - 1, by: 2) {
-        let teamAGoals = koRoundGoals[i]
-        let teamBGoals = koRoundGoals[i + 1]
+    for kick in penalties {
+        pks += kick
+    }
 
-        totalPks = teamAGoals + teamBGoals
-        if totalPks > mostPks {
-            mostPks = totalPks
+    for i in stride(from: 0, to: penalties.count - 1, by: 2) {
+        let teamAKicks = penalties[i]
+        let teamBKicks = penalties[i + 1]
+
+        if teamAKicks != 0 {
+            teamAGoals += 1
+        }
+
+        if teamBKicks != 0 {
+            teamBGoals += 1
+        }
+
+        scored += (teamAGoals + teamBGoals)
+
+        if scored > totalScored {
+            totalScored = scored
         }
     }
 
-    return (shootouts, pks, mostPks, totalPks)
+    return (shootouts, pks, scored, totalScored)
 }
 
 // Init return values from processor functions
 let goalTally = goalProcessor(goals: worldCupGoals)
 let matchTally = matchProcessor(matches: worldCupGoals)
-let pkTally = pkProcessor(koRoundGoals: penaltyShootoutGoals)
+let pkTally = pkProcessor(penalties: penaltyShootoutGoals)
 
 print()
 print("===2026 WORLD CUP STATS===\n")
@@ -339,6 +355,8 @@ print("Penalty Shootouts: \(pkTally.shootouts)")
 print("Penalty Kicks: \(pkTally.pks)")
 print("Most Goals (per team): \(goalTally.goalmax) ")
 print("Least Goals (per team): \(goalTally.goalMin)")
-print("Most Goals (per match): \(matchTally.mostGoals) (\(pkTally.mostPks))")
-print("Total Goals (in tournament): \(goalTally.gotalTotal) (\(pkTally.totalPks))")
+print("Most Goals (per match): \(matchTally.mostGoals) (\(pkTally.scored))")
+print(
+    "Total Goals (in tournament): \(goalTally.gotalTotal) (\(pkTally.totalScored + goalTally.gotalTotal))"
+)
 print()
