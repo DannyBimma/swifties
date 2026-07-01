@@ -65,3 +65,35 @@ if dopeNums.isSuperset(of: distinctEvenNums) {
 print()
 print("===DICTIONARIES IN THE LIBRARY===")
 print()
+
+// Init an empty dictionary
+var japaneseNums: [Int: String] = [:]
+
+// Add key-value pairs to the dictionary
+japaneseNums = [
+    1: "いち",
+    2: "に",
+    3: "さん",
+    4: "よん",
+    5: "ご",
+    6: "ろく",
+    7: "なな",
+    8: "はち",
+    9: "きゅう",
+    10: "じゅう",
+]
+
+print()
+
+// Iterate over the keys and values in a dictionary
+for (key, val) in japaneseNums {
+    print("The number \(key) is wrtten as \(val) in Japanese.")
+}
+
+print()
+
+// Iterate over the keys or values only
+print("Hail Jpan 10 times!")
+for theValues in japaneseNums.values {
+    print("🇯🇵 \(theValues)")
+}
