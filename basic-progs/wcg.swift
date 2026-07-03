@@ -285,6 +285,16 @@ worldCupGoals.append(2)
 worldCupGoals.append(0)
 
 // Goals on 2/07/2026
+worldCupGoals.append(3)
+worldCupGoals.append(0)
+
+worldCupGoals.append(2)
+worldCupGoals.append(1)
+
+worldCupGoals.append(2)
+worldCupGoals.append(0)
+
+// Goals on 3/07/2026
 // TODO:
 
 func matchProcessor(matches: [Int]) -> (matchCount: Int, goalessDraws: Int, mostGoals: Int) {

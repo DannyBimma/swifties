@@ -1,45 +1,49 @@
 // Loops, Iterators, and Conditionals
 
 // Optionals for value that may be missing
-let timeofDay: Int? = 12
+let timeofDay: Int? = 24
 let userName: String? = "Danny Bimma"
-var greeting = ""
+var timelyGreeting: String
 
 // Generate greeting using idiomatic guard let for early exit
 func generateGreeting(user: String?, time: Int?) -> String {
-    guard let user = user else { return "" }
-    guard let time = time else { return "" }
+    guard let uName = user else { return "" }
+    guard let cTime = time else { return "" }
 
     let greeting =
-        switch time {
+        switch cTime {
         case 0..<12:
-            "Good morning, \(user)!"
+            "Good morning, \(uName)!"
         case 13...19:
-            "Good evening \(user)!"
+            "Good evening \(uName)!"
         case 20..<24:
-            "Good night \(user)"
+            "Good night \(uName)"
         default:
-            "Welcome to demon time, \(user)!"
+            "Welcome to Demon Time, \(uName)!"
         }
 
     return greeting
 }
 
-greeting = generateGreeting(user: userName, time: timeofDay)
+timelyGreeting = generateGreeting(user: userName, time: timeofDay)
 
+print(timelyGreeting)
+
+print()
 print("SALES ASSESMENT FOR CURRENT MONTH:")
-print("\n")
-print(greeting)
+print()
 
 let salesHistory = [420.69, 42.47, 360.00, 195.55, 99.99]
 var commission = 0
 
-// For loops are iterators, for easy iterations
+// For-in in Swift loops are iterators, for easy iterations
 for sale in salesHistory {
-    if sale > 50 {
+    if sale >= 100.00 {
         commission += 15
-    } else {
+    } else if sale < 100.00 && sale >= 50.00 {
         commission += 5
+    } else {
+        commission += 0
     }
 }
 
