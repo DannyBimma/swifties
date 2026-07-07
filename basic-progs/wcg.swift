@@ -323,6 +323,13 @@ worldCupGoals.append(3)
 // NOTE: Round of 16
 
 // Goals on 6/07/2026
+worldCupGoals.append(0)
+worldCupGoals.append(1)
+
+worldCupGoals.append(1)
+worldCupGoals.append(4)
+
+// Goals on 7/07/2026
 // TODO:
 
 func matchProcessor(matches: [Int]) -> (matchCount: Int, goalessDraws: Int, mostGoals: Int) {
