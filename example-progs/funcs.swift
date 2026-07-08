@@ -49,3 +49,25 @@ func cause(subject: String) -> Int {
 let _ = cause(subject: "Kara")
 
 // Define and call a function with multiple return values
+
+func top3Unis() -> (one: String, two: String, three: String) {
+    let numberOne = "The MCU"
+    let numberTwo = "The DCU"
+    let NumberThree = "Invincible"
+
+    return (numberOne, numberTwo, NumberThree)
+}
+
+print()
+
+print("The top 3 Universes in her opinion are:")
+print(top3Unis().one)
+print(top3Unis().two)
+print(top3Unis().three)
+
+// Define and call a function with an implicit return value
+func closingStatement() -> String {
+    "\nWe found this to be pretty based."
+}
+
+print(closingStatement())
