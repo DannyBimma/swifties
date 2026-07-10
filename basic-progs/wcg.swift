@@ -339,6 +339,13 @@ penaltyShootoutGoals.append(4)
 penaltyShootoutGoals.append(3)
 
 // Goals on 8/07/2026
+// NOTE: No matches played
+
+// Goals on 9/10/2026
+worldCupGoals.append(2)
+worldCupGoals.append(0)
+
+// Goals on 10/07/2026
 // TODO:
 
 func matchProcessor(matches: [Int]) -> (matchCount: Int, goalessDraws: Int, mostGoals: Int) {
