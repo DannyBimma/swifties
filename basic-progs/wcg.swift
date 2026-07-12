@@ -346,7 +346,14 @@ worldCupGoals.append(2)
 worldCupGoals.append(0)
 
 // Goals on 10/07/2026
-// TODO:
+worldCupGoals.append(2)
+worldCupGoals.append(1)
+
+// Goals on 11/07/2026
+worldCupGoals.append(1)
+worldCupGoals.append(2)
+
+// TODO: Argentina vs. Switzerland goals
 
 func matchProcessor(matches: [Int]) -> (matchCount: Int, goalessDraws: Int, mostGoals: Int) {
     let matchCount = matches.count / 2
@@ -433,11 +440,11 @@ print("===2026 WORLD CUP STATS===\n")
 print("Matches Played: \(matchTally.matchCount)")
 print("Goaless Draws: \(matchTally.goalessDraws)")
 print("Penalty Shootouts: \(pkTally.shootouts)")
-print("Penalty Kicks: \(pkTally.pks)")
-print("Most Goals (per team): \(goalTally.goalmax) ")
-print("Least Goals (per team): \(goalTally.goalMin)")
-print("Most Goals (per match): \(matchTally.mostGoals) (\(pkTally.scored))")
+print("Penalty Shootout Kicks: \(pkTally.pks)")
+print("Most Goals per team: \(goalTally.goalmax) ")
+print("Least Goals per team: \(goalTally.goalMin)")
+print("Most Goals per match: \(matchTally.mostGoals) (\(pkTally.scored))")
 print(
-    "Total Goals (in tournament): \(goalTally.gotalTotal) (\(pkTally.totalScored + goalTally.gotalTotal))"
+    "Total Goals in tournament: \(goalTally.gotalTotal) (\(pkTally.totalScored + goalTally.gotalTotal))"
 )
 print()
