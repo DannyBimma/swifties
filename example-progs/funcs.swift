@@ -2,10 +2,10 @@
 
 // Define and call a function with a parameter and return value
 func helloWorld(name: String) -> String {
-    return "Hello, \(name). I am World!"
+    return "Hello, World. I am \(name)!"
 }
 
-print(helloWorld(name: "Danny"))
+print(helloWorld(name: "Kyrptonian"))
 
 // Define and call a function without any parameters
 func kryptonianBiology() -> String {
@@ -51,9 +51,9 @@ let _ = cause(subject: "Kara")
 // Define and call a function with multiple return values
 
 func top3Unis() -> (one: String, two: String, three: String) {
-    let numberOne = "The MCU"
-    let numberTwo = "The DCU"
-    let NumberThree = "Invincible"
+    let numberOne = "1. The MCU"
+    let numberTwo = "2. The DCU"
+    let NumberThree = "3. Invincible"
 
     return (numberOne, numberTwo, NumberThree)
 }
@@ -67,7 +67,7 @@ print(top3Unis().three)
 
 // Define and call a function with an implicit return value
 func closingStatement() -> String {
-    "\nWe found this to be pretty based."
+    "We found this to be pretty based."
 }
 
 print(closingStatement())
