@@ -49,13 +49,13 @@ func cause(subject: String) -> Int {
 let _ = cause(subject: "Kara")
 
 // Define and call a function with multiple return values
-
-func top3Unis() -> (one: String, two: String, three: String) {
+func top3Unis() -> (one: String, two: String, three: String, charCount: Int) {
     let numberOne = "1. The MCU"
     let numberTwo = "2. The DCU"
-    let NumberThree = "3. Invincible"
+    let numberThree = "3. Invincible"
+    let cc = numberOne.count + numberTwo.count + numberThree.count
 
-    return (numberOne, numberTwo, NumberThree)
+    return (numberOne, numberTwo, numberThree, cc)
 }
 
 print()
@@ -65,9 +65,13 @@ print(top3Unis().one)
 print(top3Unis().two)
 print(top3Unis().three)
 
+let basedScore = top3Unis().charCount
+
 // Define and call a function with an implicit return value
 func closingStatement() -> String {
-    "We found this to be pretty based."
+    "We found this to be pretty based... \(36 + basedScore) out of 420!!"
 }
 
 print(closingStatement())
+
+//TODO: Define and call a function with distinct argument labels and parameter names
